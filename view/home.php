@@ -14,8 +14,9 @@
                 <a href="view/log.php">Log in</a>|
                 <a href="../index.php">Mareket Place</a>
                 <input type="text" placeholder="search..." name="searchbox">
-                <a href="#">Message</a>
-                <a href="#">Notification</a>
+                <input type="button" value="Search" name="btnserach">
+                <a href="message.php">Message</a>
+                <a href="notification.php">Notification</a>
                 <a href="../php/logout.php">Log out</a>
             </td>
         </tr>
