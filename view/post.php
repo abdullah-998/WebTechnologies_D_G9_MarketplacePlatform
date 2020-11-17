@@ -21,7 +21,7 @@
         </tr>
         <tr>
             <td height="600px" width="200px">
-            <form action="postCheck3" method="POST">
+            <form action="postCheck4" method="POST">
                     <fieldset>
                         <legend><b>Search</b></legend>
                         <input type="text" name="typesrch" placeholder="search"><br><br>
