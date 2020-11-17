@@ -12,8 +12,10 @@
                 <img src="../asset/logo.png" height="60" width="110">
                 Wel come, <a href="home.php"><?php echo "User"; ?></a>
                 <a href="view/log.php">Log in</a>|
-                <a href="index.php">Mareket Place</a>|
+                <a href="../index.php">Mareket Place</a>
                 <input type="text" placeholder="search..." name="searchbox">
+                <a href="#">Message</a>
+                <a href="#">Notification</a>
                 <a href="../php/logout.php">Log out</a>
             </td>
         </tr>
@@ -21,9 +23,13 @@
             <td height="600px" width="200px">
                 <img src="../asset/user.png" height="180px" width="180px"><br>
                 <?php echo "<b>User Name</b>";?><hr>
+                <ul>
+                    <li><a href="profile.php">Profile</a><br></li>
+                    <li><a href="Post.php">Post</a><br></li>
+                </ul>
             </td>
             <td height="600px" width="700px">
-                
+                <h1>News Feed...</h1>
             </td>
         </tr>
         <tr>
