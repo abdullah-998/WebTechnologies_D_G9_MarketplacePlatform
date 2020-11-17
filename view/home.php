@@ -26,7 +26,7 @@
                 <?php echo "<b>User Name</b>";?><hr>
                 <ul>
                     <li><a href="profile.php">Profile</a><br></li>
-                    <li><a href="Post.php">Post</a><br></li>
+                    <li><a href="post.php">Post</a><br></li>
                 </ul>
             </td>
             <td height="600px" width="700px">
