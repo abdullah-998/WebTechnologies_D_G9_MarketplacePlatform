@@ -24,10 +24,10 @@
                         Email <input type="email" name="email"><br><br>
                         Password <input type="password" name="pass"><br><br>
                         Confirm Password <input type="password" name="cpass"><br><br>
-                        Chose Category<select>
-                            <option>Buyer</option>
-                            <option>Freelancer</option>
-                            <option>Visitor</option>
+                        Chose Category<select name="ac_type">
+                            <option value="buyer">Buyer</option>
+                            <option value="freelancer">Freelancer</option>
+                            <option value="visitor">Visitor</option>
                         </select>
                         <hr>
                         <input type="checkbox" name="checkreg"><b>I have accepted all terms and policy</b><br>
