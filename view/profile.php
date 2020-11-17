@@ -51,8 +51,9 @@
                    
                </fieldset>
                <fieldset>
-                   <legend><b>Social Media Link</b></legend>
-                   <a href="https://www.linkedin.com"><img src="../asset/lk.webp" height="40px" width="40px"></a>       
+                   <legend><b>Social Media Links</b></legend>
+                   <a href="https://www.linkedin.com"><img src="../asset/lk.webp" height="40px" width="40px"></a>    
+                   <a href="https://www.github.com"><img src="../asset/git.png" height="40px" width="40px"></a>    
                    <a href="https://www.twitter.com"><img src="../asset/tw.jpg" height="40px" width="40px"></a>       
                    <a href="https://www.facebook.com"><img src="../asset/fb.png" height="40px" width="40px"></a>       
                    <a href="https://www.instragram.com"><img src="../asset/ins.webp" height="40px" width="40px"></a>       
