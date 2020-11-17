@@ -20,7 +20,7 @@
                 <h1>Wel Come to world largest freelancer site</h1>
                 <p>where you can find out variety of freelancer all over the world</p><br>
                 Don't have account?
-                <input type="button" value="Sign up">
+                <a href="view/reg.php"><button>Register</button></a>
             </td>
         </tr>
         <tr>
