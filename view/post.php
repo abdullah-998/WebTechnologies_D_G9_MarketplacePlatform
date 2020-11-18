@@ -74,6 +74,7 @@
                 <form action="postCheck2.php" method="POST">
                     <fieldset>
                         <legend><b>Posts</b></legend>
+                        <a href="#"><img src="../asset/user.png" height="30px" width="30px">User 2</a> posted 2 days ago<br><br>
                         I need a high skilled web devoloper<br>
                         Type: Web Dev<br>
                         Tags: html,php<br>
@@ -85,6 +86,7 @@
                         <input type="button" name="btnapply" value="apply"> 
                         <input type="button" name="btnmsg" value="send message"><br>
                         <hr><hr>
+                        <a href="#"><img src="../asset/user.png" height="30px" width="30px">User 3</a> posted 2 hours ago<br><br>
                         I need a high skilled web devoloper<br>
                         Type: Web Dev<br>
                         Tags: html,php<br>
