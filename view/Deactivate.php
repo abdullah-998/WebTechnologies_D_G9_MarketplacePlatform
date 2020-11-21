@@ -12,7 +12,8 @@
                 <form action="../php/Deactivate.php" method="POST">
                     <fieldset>
                         <legend><b>Deactivate</b></legend>
-                        Are you sure you want to <b>Deactivate</b> your account?<br>
+                        Are you sure you want to <b>Deactivate</b> your account?<br><br>
+                        Enter Password: 
                         <input type="password" name="pass"><br><hr>
                         <a href="profile.php"><button>Go Back</button></a>
                         <input type="submit" value="Deactivate" name="submit">
