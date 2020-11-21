@@ -19,8 +19,7 @@
                 <form action="../php/regCheck.php" method="POST">
                     <fieldset>
                         <legend><b>Registration</b></legend>
-                        Name <input type="text" name="name"><br><br>
-                        Username <input type="text" name="uname"><br><br>
+                        Name <input type="text" name="sname"><br><br>
                         Email <input type="email" name="email"><br><br>
                         Password <input type="password" name="pass"><br><br>
                         Confirm Password <input type="password" name="cpass"><br><br>
