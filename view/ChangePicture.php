@@ -34,7 +34,7 @@
                 </ul>
             </td>
             <td height="500px" width="700px" align="center">
-                <form action="../php/ePCheck.php" method="POST">
+                <form action="../php/ePicCheck.php" method="POST">
                     <fieldset>
                         <legend><b>Change Picture</b></legend>
                         <img src="../asset/user.png" height="150px" width="150px" align="center"><br><hr>
