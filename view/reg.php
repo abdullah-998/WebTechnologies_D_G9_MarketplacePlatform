@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +24,7 @@
                         Email <input type="email" name="email"><br><br>
                         Password <input type="password" name="pass"><br><br>
                         Confirm Password <input type="password" name="cpass"><br><br>
-                        Chose Category<select name="ac_type">
+                        Chose Category<select name="ac_type[]">
                             <option value="buyer">Buyer</option>
                             <option value="freelancer">Freelancer</option>
                             <option value="visitor">Visitor</option>
@@ -33,6 +34,31 @@
                         <input type="submit" name="reg" value="Register">
                     </fieldset>
                 </form>
+                <?php
+                    if(isset($_REQUEST['msg']))
+                    {
+                        if($_REQUEST['msg']=='null')
+                        {
+                            echo "One or more fields are null...<br>";
+                        }
+                        if($_REQUEST['msg']=='pass_match')
+                        {
+                            echo "Password did not match...<br>";
+                        }
+                        if($_REQUEST['msg']=='pass_short')
+                        {
+                            echo "Please chose a strong password more tha 7 characters...<br>";
+                        }
+                        if($_REQUEST['msg']=='invalid_name')
+                        {
+                            echo "Invalid name..<br>";
+                        }
+                        if($_REQUEST['msg']=='create')
+                        {
+                            echo "Your account have create succesfully..<br>Please log in<br>";
+                        }
+                    }
+                ?>
             </td>
         </tr>
         <tr>
