@@ -25,6 +25,7 @@
                 <?php echo "<b>User Name</b>";?><hr>
                 <ul>
                     <li><a href="home.php">Home</a></li>
+                    <li><a href="editProfile.php">Edit Profile</a></li>
                 </ul>
             </td>
             <td height="550px" width="700px">
