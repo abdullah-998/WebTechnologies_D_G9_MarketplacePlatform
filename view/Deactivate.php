@@ -14,7 +14,7 @@
                         <legend><b>Deactivate</b></legend>
                         Are you sure you want to <b>Deactivate</b> your account?<br>
                         <input type="password" name="pass"><br><hr>
-                        <input type="submit" value="go back" name="bak">
+                        <a href="profile.php"><button>Go Back</button></a>
                         <input type="submit" value="Deactivate" name="submit">
                     </fieldset>
                 </form> 
