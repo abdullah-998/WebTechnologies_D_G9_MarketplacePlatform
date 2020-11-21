@@ -26,6 +26,11 @@
                 <ul>
                     <li><a href="home.php">Home</a></li>
                     <li><a href="editProfile.php">Edit Profile</a></li>
+                    <li><a href="ChangePicture.php">Change Profile Picture</a></li>
+                    <li><a href="ChangePassword.php">Change Password</a></li>
+                    <li><a href="UpdateGeeg.php">Change Geeg</a></li>
+                    <li><a href="RunningProject.php">Running Project</a></li>
+                    <li><a href="Deactivate.php">Deactivate</a></li>
                 </ul>
             </td>
             <td height="550px" width="700px">
