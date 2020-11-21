@@ -19,12 +19,12 @@
                 <form action="logCheck.php">
                     <fieldset>
                         <legend><b>Log in</b></legend>
-                        username:<input type="text" name="username"><br><br>
+                        Email:<input type="text" name="username"><br><br>
                         password:<input type="password" name="pass"><br>
                         <hr>
                         <input type="checkbox" name="rem_me">remember me<br>
                         <input type="reset" name="reset">
-                        <input type="submit" name="submit">
+                        <input type="submit" name="submit" value="Log in">
                     </fieldset>
                 </form>
             </td>
