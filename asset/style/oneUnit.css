@@ -1,0 +1,84 @@
+.main-body{
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+    grid-auto-rows: 55rem;
+    gap: .8rem;
+    background-color: azure;
+    grid-template-areas: 'm m m m m m m m m m m m m m m m';
+}
+
+.main-body_unit{
+    grid-area: m;
+}
+.menu-button{
+    text-decoration: none;
+    color: #777;
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: block;
+    text-align: left;
+    border: .1rem solid rgba(18, 236, 91, 0.856);
+    padding: 1rem 1.5rem;
+}
+.menu-button:hover{
+    background-color:  rgba(18, 236, 91, 0.856);
+    color: white;
+}
+/* .profile__pic{
+    height: 19rem;
+    border: .1rem solid rgba(18, 236, 91, 0.856);
+    margin-bottom: .5rem;
+} */
+.profile__pic{
+    border:.1rem solid rgba(18, 236, 91, 0.856);
+}
+#porfile_img{
+    margin-left: 2rem;
+}
+.name{
+    color: #777;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+.top_part{
+    border: .1rem solid rgba(18, 236, 91, 0.856);
+    margin: 1rem;
+    padding: 2rem;
+}
+.middle_part{
+    border: .1rem solid rgba(18, 236, 91, 0.856);
+    margin: 1rem;
+    padding: 1rem;
+}
+.btnXX{
+    color: #777;
+    border: .1rem solid rgba(18, 236, 91, 0.856);
+    border-radius: 10rem;
+    padding: .5rem .5rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+.btnXX:hover{
+    color:white;
+    border: .1rem solid rgba(18, 236, 91, 0.856);
+    background-color: rgba(18, 236, 91, 0.856);
+}
+.hdr{
+    color: #777;
+    font-size: 2rem;
+    border-bottom: .2rem solid rgba(18, 236, 91, 0.856);
+}
+.sub_hdr2{
+    color: #777;
+    font-size: 1.4rem;
+    border: none;  
+}
+.sub_hdr{
+    color: #777;
+    font-size: 1.4rem;  
+    border: .1rem solid rgba(18, 236, 91, 0.856); 
+    padding: 1rem;
+    margin-top: .5rem;
+}

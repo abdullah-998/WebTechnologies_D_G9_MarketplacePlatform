@@ -1,0 +1,50 @@
+.index-header{
+    background-color: white;
+    padding: 1.3rem;
+    border-bottom:.4rem solid rgba(20, 20, 20, 0.774);
+    color: rgba(64,65,69);
+    position: relative;
+    font-weight: 600;
+}
+
+#dot{
+    font-weight: bold;
+    font-size: 3rem;
+    color:rgba(18, 236, 91, 0.856) ;
+}
+.log-text{
+    color: rgb(115, 115, 115);
+}
+.header-right{
+    position: absolute;
+    top: 1.4rem;
+    right: 2rem;
+}
+.header-right--email{
+    padding: .6rem;
+    border:rgba(18, 236, 91, 0.856) .1rem solid;
+}
+.header-right--pass{
+    padding: .6rem;
+    border: rgba(18, 236, 91, 0.856) .1rem solid;
+}
+.header-right--btn{
+    padding: .7rem;
+    color: rgba(18, 236, 91, 0.856);
+    font-weight: 600;
+    background-color: white;
+    font-weight: 700;
+    border: .1rem rgba(18, 236, 91, 0.856) solid;
+    cursor: pointer;
+    padding: .5rem .5rem;
+}
+.header-right--btn:hover{
+    padding: .7rem;
+    color: white;
+    font-weight: 600;
+    background-color:rgba(18, 236, 91, 0.856);
+    font-weight: 700;
+    border: .1rem rgba(18, 236, 91, 0.856) solid;
+    cursor: pointer;
+    padding: .5rem .5rem;
+}

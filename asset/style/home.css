@@ -1,0 +1,85 @@
+.main-body{
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+    gap: 1rem;
+    background-color: azure;
+    grid-template-areas: 's s s m m m m m m m m m m r r r';
+}
+
+.left-sidebar{
+    background-color: white;
+    grid-area: s;
+}
+.newsfeed{
+    background-color: azure;
+    grid-area: m;
+}
+.right-sidebar{
+    background-color:white;
+    grid-area: r;
+}
+.left-menu{
+    border:.2rem solid rgba(18, 236, 91, 0.856) ;
+    margin: .1rem;
+}
+.menu-button{
+    text-decoration: none;
+    color: #777;
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: block;
+    text-align: left;
+    border: .1rem solid rgba(18, 236, 91, 0.856);
+    padding: 1rem 1.5rem;
+}
+.menu-button:hover{
+    background-color:  rgba(18, 236, 91, 0.856);
+    color: white;
+}
+.recent{
+    border: .2rem solid rgba(18, 236, 91, 0.856);
+    padding: .5rem;
+    border-radius: 1rem;
+}
+.hd{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color:rgba(18, 236, 91, 0.856);
+    padding-left: .5rem;
+    padding-top: .5rem;
+}
+.desc{
+    padding-top: 1rem;
+    font-size: 1.4rem;
+    color:  rgba(18, 167, 236, 0.856);
+}
+.adv{
+    margin-top: 1rem;
+    border: .2rem solid rgba(18, 236, 91, 0.856);
+    padding: .5rem;
+    border-radius: 1rem;
+}
+.hd2{
+    color: rgba(18, 236, 91, 0.856);
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.profile__pic{
+    border:.1rem solid rgba(18, 236, 91, 0.856);
+    clip-path: circle(50% at 50% 50%);
+}
+.name{
+    color: #777;
+    font-size: 1.8rem;
+}
+.greet{
+    color: #777777; ;
+    border: rgba(18, 236, 91, 0.856) solid .2rem;
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: block;
+}

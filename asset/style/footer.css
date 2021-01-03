@@ -1,0 +1,14 @@
+.footer{
+    background-color:  white;
+    color: rgb(115,115,115);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 1rem;
+    border-top: .4rem solid rgba(20, 20, 20, 0.774);
+}
+.footer-text{
+    text-decoration: none;
+    color:rgba(18, 236, 91, 0.856);
+    margin-left: 1rem;
+}

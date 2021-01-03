@@ -1,0 +1,74 @@
+.newsfeed{
+    border: .1rem solid rgba(18, 236, 91, 0.856);
+    margin: .1rem;
+    padding: .5rem;
+}
+.post_input{
+    border: .1rem solid rgba(18, 236, 91, 0.856);
+    margin: .5rem;
+}
+.posts{
+    border: .1rem solid rgba(18, 236, 91, 0.856);
+    margin: .5rem; 
+}
+.pfield{
+    border: .1rem solid rgba(18, 236, 91, 0.856);
+    padding: .5rem;
+    margin: .5rem;
+}
+.desc{
+    border: .1rem solid rgba(18, 236, 91, 0.856);
+    margin: .5rem;
+}
+.btnY{
+    border: .1rem solid rgba(18, 236, 91, 0.856);
+    padding: 1rem 1.5rem;
+    margin: .5rem;
+    color: #777777;
+    font-weight: 500;
+    font-size: 1.6rem;
+    background: white;
+    cursor: pointer;
+}
+.btnY:hover{
+    background:rgba(18, 236, 91, 0.856);
+    color: white;
+}
+.post_input_text{
+    margin: .5rem;
+    color: #777777;
+    font-size: 1.6rem;
+}
+.btnxy{
+    border: .1rem solid rgba(18, 236, 91, 0.856);
+    padding: .5rem 1rem;
+    margin: .5rem;
+    color: #777777;
+    font-weight: 500;
+    font-size: 1.6rem;
+    background: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btnxy:hover{
+    background:rgba(18, 236, 91, 0.856);
+    color: white;
+}
+.link{
+    text-decoration: none;
+    margin: .5rem;
+    color: #0b1aee;
+}
+.projectName{
+    margin: .5rem;
+    color: #777777;
+}
+.projectPrice{
+    margin: .5rem;
+    color: #777777;
+}
+.info{
+    border: .1rem solid rgba(18, 236, 91, 0.856);
+    margin: .5rem;
+    padding: .5rem;
+}

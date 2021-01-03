@@ -1,0 +1,113 @@
+.main-body{
+    position: relative;
+    height: 80vh;
+}
+.side-info{
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 50%;
+}
+.registration_form{
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    width: 50%;
+    border: .2rem solid rgba(18, 236, 91, 0.856);
+    padding: 3rem;
+    margin: 2rem;
+    height: 90%;
+    border-radius: 5rem;
+}
+.rule1{
+    display: inline;
+    padding: 1rem;
+    margin: .8rem;
+    border: .1rem solid rgba(18, 236, 91, 0.856);
+    width: 25rem;
+}
+.rule2{
+    display: inline;
+    padding: 1rem;
+    margin: .8rem;
+    border: .1rem solid rgba(18, 236, 91, 0.856);
+}
+.rule3{
+    display: inline;
+    padding: 1rem;
+    margin: .8rem;
+    border: .1rem solid rgba(18, 236, 91, 0.856);
+    width: 15rem;
+}
+.pass_field{
+    display: inline;
+    margin: .5rem;
+    padding: 1rem;
+    width: 25rem;
+    border: .1rem solid rgba(18, 236, 91, 0.856);
+}
+
+.reg-font{
+    font-size: 2rem;
+    color: #777;  
+}
+
+.reg-font1{
+    font-size: 1.6rem;
+    color: #777;
+}
+.btn{
+    color: rgba(18, 236, 91, 0.856);
+    background-color: white;
+    padding: .5rem 1rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+    border: rgba(18, 236, 91, 0.856) solid .1rem;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgba(18, 236, 91, 0.856);
+    color: white;
+}
+.header1{
+    text-transform: uppercase;
+    margin-top: 3em;
+    margin-left: .5em;
+    color:  rgba(18, 236, 91, 0.856);
+    font-size: 3rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+}
+.short_des{
+    text-transform: uppercase;
+    font-size: 2rem;
+    color:  rgba(18, 236, 91, 0.856);
+    line-height: 1.8rem;
+    font-weight: 500;
+    margin-left: 6rem;
+    margin-top: 1rem;
+}
+.log-text{
+    color: #777;
+    font-weight: 400;
+}
+
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    80%{
+        transform: translate(1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+.reg-message1{
+    color:rgba(18, 236, 91, 0.856);
+}
+.reg-message2{
+    color: red;
+}
