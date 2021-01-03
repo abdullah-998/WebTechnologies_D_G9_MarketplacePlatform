@@ -1,23 +1,22 @@
 <?php
     session_start(); 
-    include_once('../model/postService.php');
-    include_once('../model/buyerService.php');
-
-    $posts=postAll();
-    if($_SESSION['log'])
+    if(isset($_SESSION['log']))
     {
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>riverr | Post</title>
+    <title>riverr | Reviews</title>
     <link rel="stylesheet" type="text/css" href="../asset/style/header.css?v=<?php echo time()?>">
     <link rel="stylesheet" type="text/css" href="../asset/style/footer.css?v=<?php echo time()?>">
     <link rel="stylesheet" type="text/css" href="../asset/style/main.css?v=<?php echo time()?>">
     <link rel="stylesheet" type="text/css" href="../asset/style/home.css?v=<?php echo time()?>">
-    <link rel="stylesheet" type="text/css" href="../asset/style/post.css?v=<?php echo time()?>">
+    <style>
+       
+    </style>
 </head>
 <body>
     <div class="main_container"> 
@@ -27,45 +26,28 @@
         <div class="main-body">
             <div class="left-sidebar">
                 <div class="left-menu">
-                    <a class="menu-button" href="profile.php?user_id=<?=$_SESSION['id']?>">Profile</a>
-                    <a class="menu-button" href='home.php'>Home</a>
+                    <a class="menu-button" href="http://localhost/php/webTechnologies_D_G9_MarketplacePlatform/view/profile.php?user_id=<?=$_SESSION['id']?>" class="header-right-menus">Profile</a>
+                    <a class="menu-button" href='post.php'>Post</a>
                 </div>
             </div>
             <div class="newsfeed">
-                <?php 
-                ///jei typer age sei div er por prjonto
-                    if($_SESSION['type']=='Buyer')
-                    {
-                ?>
-                <div class="post_input">
-                    <div class="post_input_text">Name</div>
-                    <input type="text" name="post_name" id="pname" class="pfield"><br>
-                    <div class="post_input_text">Short Description</div>
-                    <textarea id="description" name="description" class="desc" rows="4" cols="95">Write short description about your project</textarea><br>
-                    <span class="post_input_text">Pricing $ </span><input type="text" class="pfield" name="price" id="price"><br>
-                    <button class="btnY" onclick="post()">Post</button>
-                    <div id="messagex"></div>
-                </div>
-                <?php } ?>
-                <div class="posts">
-                    <div class="post">
-                        <?php
-                        for($i=0;$i<count($posts);$i++)
-                        {
-                            $buyer=buyerInfo($posts[$i]['uid']);
-
-                        ?>
-                        <div class="info">
-                        
-                            <a class="link" href="http://localhost/php/webTechnologies_D_G9_MarketplacePlatform/view/profile.php?user_id=<?=$posts[$i]['uid'] ?>"><?=$buyer['name']?></a><br>
-                            <div class="projectName">Project Name: <?=$posts[$i]['pname']?></div>
-                            <div class="projectPrice">Price $: <?=$posts[$i]['price']?></div>
-                            <a class="btnxy" href="http://localhost/php/webTechnologies_D_G9_MarketplacePlatform/view/aboutProject.php?pid=<?=$posts[$i]['pid']?>">view</a><br>
-                        
-                        </div>
-                        <?php } ?>
-                    </div>
-                </div>
+               <table class="tables" border="1">
+                    <tr>
+                        <th>User Name</th>
+                        <th>Star</th>
+                        <th>Comment</th>
+                    </tr>
+                    <tr>
+                        <td>Akash</td>
+                        <td>5</td>
+                        <td>Very Good Person</td>
+                    </tr>
+                    <tr>
+                        <td>Abdullah</td>
+                        <td>4</td>
+                        <td>Good Person</td>
+                    </tr>
+               </table>
             </div>
             <div class="right-sidebar">
                 <div class="recent">
@@ -86,7 +68,7 @@
             <?php include_once('footer.php')?>
         </div>
     </div>
-    <script src="../asset/script/post.js"></script>
+    
 </body>
 </html>
 <?php

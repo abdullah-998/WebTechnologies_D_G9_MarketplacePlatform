@@ -1,55 +1,61 @@
-<?php 
+<?php
     session_start(); 
-    if($_SESSION['flag'])
+    if(isset($_SESSION['log']))
     {
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message</title>
+    <title>riverr | Message</title>
+    <link rel="stylesheet" type="text/css" href="../asset/style/header.css?v=<?php echo time()?>">
+    <link rel="stylesheet" type="text/css" href="../asset/style/footer.css?v=<?php echo time()?>">
+    <link rel="stylesheet" type="text/css" href="../asset/style/main.css?v=<?php echo time()?>">
+    <link rel="stylesheet" type="text/css" href="../asset/style/home.css?v=<?php echo time()?>">
 </head>
 <body>
-    <table border="1" align="center">
-        <tr>
-            <td height="40px" width="300px"><img src="../asset/msg.png" height="35px" width="40px"><b>Messages</b></td>
-            <td height="40px" width="230px">
-                <img src="../asset/user.png" height="35px" width="35px"><b>Name of User</b>
-            </td>
-        </tr>
-        <tr>
-            <td height="500px" width="280px" rowspan="2"><hr>
-                <img src="../asset/user.png" height="35px" width="35px">Name of User 1<br><hr>
-                <img src="../asset/user.png" height="35px" width="35px">Name of User 2<br><hr>
-                <img src="../asset/user.png" height="35px" width="35px">Name of User 3<br><hr>
-            </td>
-            <td height="500px" width="250px">
-                hello
-            </td>
-        </tr>
-        <tr>
-            <form>
-            <td height="34px" width="280px">
-                <input type="text" name="msgbox">
-                <input type="submit" value="send" name="submit"><br><br>
-                <input type="submit" value="request negotiation" name="negotiation"><br><br>
-                <?php
-                if(isset($_REQUEST['negotiation']))
-                {
-                    echo "Negotiation requested..<br>";
-                }
-            ?>
-            </td>
-            </form>
-        </tr>
-    </table>
+    <div class="main_container"> 
+        <div>
+            <?php include_once('header.php')?>
+        </div>
+        <div class="main-body">
+            <div class="left-sidebar">
+                <div class="left-menu">
+                    <a class="menu-button" href="http://localhost/php/webTechnologies_D_G9_MarketplacePlatform/view/profile.php?user_id=<?=$_SESSION['id']?>" class="header-right-menus">Profile</a>
+                    <a class="menu-button" href='post.php'>Post</a>
+                </div>
+            </div>
+            <div class="newsfeed">
+                
+            </div>
+            <div class="right-sidebar">
+                <div class="recent">
+                    <div class="hd">Most recents</div>
+                    <div class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio omnis saepe corporis vero quas? Accusamus a dolorem animi omnis beatae.</div>
+                    <div class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio omnis saepe corporis vero quas? Accusamus a dolorem animi omnis beatae.</div>
+                </div>
+                <div class="adv">
+                    <div class="hd2">Advertisements</div>
+                    <div class="hd">Wanna be a freelancer?</div>
+                    <div class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam ducimus maxime, aperiam saepe doloremque magnam natus ad temporibus voluptates incidunt, velit perferendis accusamus animi. Pariatur ratione voluptatem cupiditate repellat illum!</div>
+                    <div class="hd">Looking for experienced SEO?</div>
+                    <div class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam ducimus maxime, aperiam saepe doloremque magnam natus ad temporibus voluptates incidunt, velit perferendis accusamus animi. Pariatur ratione voluptatem cupiditate repellat illum!</div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <?php include_once('footer.php')?>
+        </div>
+    </div>
+    
 </body>
 </html>
 <?php
     }
     else
     {
-        header('location: log.php');
+        header('location: ../index.php');
     }
 ?>

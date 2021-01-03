@@ -1,85 +1,91 @@
 <?php
-    session_start();
-    if($_SESSION['flag'])
+    session_start(); 
+    if(isset($_SESSION['log']))
     {
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transaction History</title>
+    <title>riverr | Home</title>
+    <link rel="stylesheet" type="text/css" href="../asset/style/header.css?v=<?php echo time()?>">
+    <link rel="stylesheet" type="text/css" href="../asset/style/footer.css?v=<?php echo time()?>">
+    <link rel="stylesheet" type="text/css" href="../asset/style/main.css?v=<?php echo time()?>">
+    <link rel="stylesheet" type="text/css" href="../asset/style/home.css?v=<?php echo time()?>">
+    <style>
+        .table{
+            margin: 1rem;
+        }
+        .row{
+            border: .2rem solid rgba(18, 236, 91, 0.856);
+            display: block;
+        }
+        .col{
+            display: inline;
+            padding: 1rem;
+            border-right: .1rem solid rgba(18, 236, 91, 0.856);
+        }
+    </style>
 </head>
 <body>
-<table border="1" align="center">
-        <tr>
-            <td height="60px" width="900px" colspan="2">
-                <img src="../asset/logo.png" height="60" width="110">
-                <a href="../index.php">Mareket Place</a>
-                <input type="text" placeholder="search..." name="searchbox">
-                <input type="button" value="Search" name="btnserach">
-                <a href="message.php">Message</a>
-                <a href="notification.php">Notification</a>
-                <a href="../php/logout.php">Log out</a>
-                <a href="home.php"><img src="../asset/user.png" height="40px" width="40px"></a>
-            </td>
-        </tr>
-        <tr>
-            <td height="500px" width="200px">
-                <img src="../asset/user.png" height="180px" width="180px"><br>
-                <?php echo "<b>".$_SESSION['name']."</b>";?><hr>
-                <ul>
-                <li><a href="home.php">Home</a></li>
-                    <li><a href="editProfile.php">Edit Profile</a></li>
-                    <li><a href="ChangePicture.php">Change Profile Picture</a></li>
-                    <li><a href="ChangePassword.php">Change Password</a></li>
-                    <li><a href="UpdateGeeg.php">Change Geeg</a></li>
-                    <li><a href="RunningProject.php">Running Project</a></li>
-                    <li><a href="Deactivate.php">Deactivate</a></li>
-                    <li><a href="Transaction.php">My Transaction</a></li>
-                </ul>
-            </td>
-            <td height="500px" width="700px" align="center">
-                <table border="1">
-                    <tr>
-                        <th>Order Id</th>
-                        <th>Project Name</th>
-                        <th>Recieved From</th>
-                        <th>Amount</th>
-                    </tr>
-                    <tr>
-                        <td>1283</td>
-                        <td>Landing Page</td>
-                        <td><a href="BuyerProfile.php">Buyer 1</a></td>
-                        <td>$__</td>
-                    </tr>
-                    <tr>
-                        <td>1293</td>
-                        <td>SEO</td>
-                        <td><a href="BuyerProfile.php">Buyer 2</a></td>
-                        <td>$550</td>
-                    </tr>
-                    <tr>
-                        <td>1213</td>
-                        <td>PHP,HTML website</td>
-                        <td><a href="BuyerProfile.php">Buyer 1</a></td>
-                        <td>$__</td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td height="60px" width="900px" colspan="2" align="center">
-            copyright &copy 2020
-            </td>
-        </tr>
-    </table>
+    <div class="main_container"> 
+        <div>
+            <?php include_once('header.php')?>
+        </div>
+        <div class="main-body">
+            <div class="left-sidebar">
+                <div class="left-menu">
+                    <a class="menu-button" href="http://localhost/php/webTechnologies_D_G9_MarketplacePlatform/view/profile.php?user_id=<?=$_SESSION['id']?>" class="header-right-menus">Profile</a>
+                    <a class="menu-button" href='post.php'>Post</a>
+                </div>
+            </div>
+            <div class="newsfeed">
+                <div class="table">
+                    <div class="row">
+                        <div class="col">Order ID</div>
+                        <div class="col">Paid</div>
+                        <div class="col">Amount</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">11111111</div>
+                        <div class="col">Md Sajjad</div>
+                        <div class="col">$560</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">11111112</div>
+                        <div class="col">Md Sajjad</div>
+                        <div class="col">$450</div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-sidebar">
+                <div class="recent">
+                    <div class="hd">Most recents</div>
+                    <div class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio omnis saepe corporis vero quas? Accusamus a dolorem animi omnis beatae.</div>
+                    <div class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio omnis saepe corporis vero quas? Accusamus a dolorem animi omnis beatae.</div>
+                </div>
+                <div class="adv">
+                    <div class="hd2">Advertisements</div>
+                    <div class="hd">Wanna be a freelancer?</div>
+                    <div class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam ducimus maxime, aperiam saepe doloremque magnam natus ad temporibus voluptates incidunt, velit perferendis accusamus animi. Pariatur ratione voluptatem cupiditate repellat illum!</div>
+                    <div class="hd">Looking for experienced SEO?</div>
+                    <div class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam ducimus maxime, aperiam saepe doloremque magnam natus ad temporibus voluptates incidunt, velit perferendis accusamus animi. Pariatur ratione voluptatem cupiditate repellat illum!</div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <?php include_once('footer.php')?>
+        </div>
+    </div>
+    
 </body>
 </html>
 <?php
     }
     else
     {
-        header('location: log.php');
+        header('location: ../index.php');
     }
 ?>

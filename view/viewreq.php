@@ -1,8 +1,6 @@
 <?php
     session_start(); 
     include_once('../model/requestService.php');
-    include_once('../model/postService.php');
-    include_once('../model/freelancerService.php');
     if(isset($_SESSION['log']))
     {
 
@@ -18,15 +16,6 @@
     <link rel="stylesheet" type="text/css" href="../asset/style/main.css?v=<?php echo time()?>">
     <link rel="stylesheet" type="text/css" href="../asset/style/home.css?v=<?php echo time()?>">
     <link rel="stylesheet" type="text/css" href="../asset/style/post.css?v=<?php echo time()?>">
-    <style>
-        .projectName{
-            color: rgb(127, 3, 252);
-        }
-        .reqss{
-            border: rgba(18, 236, 91, 0.856) .1rem solid;
-            margin: .5rem;
-        }
-    </style>
 </head>
 <body>
     <div class="main_container"> 
@@ -41,48 +30,29 @@
                 </div>
             </div>
             <div class="newsfeed">
-                <?php
-                    if($_SESSION['type']=='Buyer')
-                    {
-                        $reqs=requestByBuyerID($_SESSION['id']);
-                        if(count($reqs)>0) 
+                <div class="post">
+                    <?php 
+                        $_SESSION['reqq']=$_REQUEST['req'];
+                    ?>   
+                   <div> Project propsal accept or reject</div>
+                    <?php 
+                        if($_SESSION['type']=='Buyer')
                         {
-                            for($i=count($reqs)-1;$i>=0;$i--)
-                            {
-                                $posts=postInfo($reqs[$i]['pid']);
-                                $free=freelancerInfo($reqs[$i]['fid']);
-                ?>
-                <div class="notify">
-                    <div class="reqss">
-                        <?php 
-                            if($reqs[$i]['status']=='')
-                            {
-                        ?>
-                            <a class="link" href="http://localhost/php/webTechnologies_D_G9_MarketplacePlatform/view/profile.php?user_id=<?=$free['id']?>"><?=$free['name']?></a> <span>sent you a project propsal for<span class="projectName"> <?=$posts['pname']?></span></span>
-                            <a class="link" href="http://localhost/php/webTechnologies_D_G9_MarketplacePlatform/view/viewreq.php?req=<?=$reqs[$i]['rid']?>">view req</a>
-                        <?php 
-                            }
-                            else if($reqs[$i]['status']=='Reject')
-                            {
-                        ?>
-                        <a class="link" href="http://localhost/php/webTechnologies_D_G9_MarketplacePlatform/view/profile.php?user_id=<?=$free['id']?>"><?=$free['name']?></a> <span>sent you a project propsal for<span class="projectName"> <?=$posts['pname']?></span> was rejected by you</span>
-                        <?php 
-                            }
-                            else if($reqs[$i]['status']=='Accept')
-                            {
-                        ?>
-                        <a class="link" href="http://localhost/php/webTechnologies_D_G9_MarketplacePlatform/view/profile.php?user_id=<?=$free['id']?>"><?=$free['name']?></a> <span>sent you a project propsal for<span class="projectName"> <?=$posts['pname']?></span> was accepted by you</span>
-                        <?php
-                            }
-                        ?>
-                    </div>
-                </div>
-                <?php 
-                            }
-                        }
-                    }
+                    ?>
+                    <button class="btnxy" onclick="request('accept')">Accept</button>
+                    <button class="btnxy" onclick="rqeuest('reject')">Reject</button><br>
+                    <?php }?>
+                    <div class="messagexy"></div>
+                    <?php
+                        if(isset($_SESSION['order']))
+                        {
+                            $reques=requestInfo($_SESSION['reqq']);
 
-                 ?>
+                            $order=['pid'=>$reques['pid'],'bid'=>$reques['bid'],'fid'=>$reques['fid'],'project_status'=>'Runing','payment_status'=>'Unpaid'];
+                            $stats=insertOrder($order);
+                        }
+                    ?>
+                </div>
             </div>
             <div class="right-sidebar">
                 <div class="recent">

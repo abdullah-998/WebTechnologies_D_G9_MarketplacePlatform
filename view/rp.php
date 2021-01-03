@@ -1,8 +1,5 @@
 <?php
     session_start(); 
-    include_once('../model/requestService.php');
-    include_once('../model/postService.php');
-    include_once('../model/freelancerService.php');
     if(isset($_SESSION['log']))
     {
 
@@ -17,14 +14,18 @@
     <link rel="stylesheet" type="text/css" href="../asset/style/footer.css?v=<?php echo time()?>">
     <link rel="stylesheet" type="text/css" href="../asset/style/main.css?v=<?php echo time()?>">
     <link rel="stylesheet" type="text/css" href="../asset/style/home.css?v=<?php echo time()?>">
-    <link rel="stylesheet" type="text/css" href="../asset/style/post.css?v=<?php echo time()?>">
     <style>
-        .projectName{
-            color: rgb(127, 3, 252);
+        .table{
+            margin: 1rem;
         }
-        .reqss{
-            border: rgba(18, 236, 91, 0.856) .1rem solid;
-            margin: .5rem;
+        .row{
+            border: .2rem solid rgba(18, 236, 91, 0.856);
+            display: block;
+        }
+        .col{
+            display: inline;
+            padding: 1rem;
+            border-right: .1rem solid rgba(18, 236, 91, 0.856);
         }
     </style>
 </head>
@@ -41,48 +42,32 @@
                 </div>
             </div>
             <div class="newsfeed">
-                <?php
-                    if($_SESSION['type']=='Buyer')
-                    {
-                        $reqs=requestByBuyerID($_SESSION['id']);
-                        if(count($reqs)>0) 
-                        {
-                            for($i=count($reqs)-1;$i>=0;$i--)
-                            {
-                                $posts=postInfo($reqs[$i]['pid']);
-                                $free=freelancerInfo($reqs[$i]['fid']);
-                ?>
-                <div class="notify">
-                    <div class="reqss">
-                        <?php 
-                            if($reqs[$i]['status']=='')
-                            {
-                        ?>
-                            <a class="link" href="http://localhost/php/webTechnologies_D_G9_MarketplacePlatform/view/profile.php?user_id=<?=$free['id']?>"><?=$free['name']?></a> <span>sent you a project propsal for<span class="projectName"> <?=$posts['pname']?></span></span>
-                            <a class="link" href="http://localhost/php/webTechnologies_D_G9_MarketplacePlatform/view/viewreq.php?req=<?=$reqs[$i]['rid']?>">view req</a>
-                        <?php 
-                            }
-                            else if($reqs[$i]['status']=='Reject')
-                            {
-                        ?>
-                        <a class="link" href="http://localhost/php/webTechnologies_D_G9_MarketplacePlatform/view/profile.php?user_id=<?=$free['id']?>"><?=$free['name']?></a> <span>sent you a project propsal for<span class="projectName"> <?=$posts['pname']?></span> was rejected by you</span>
-                        <?php 
-                            }
-                            else if($reqs[$i]['status']=='Accept')
-                            {
-                        ?>
-                        <a class="link" href="http://localhost/php/webTechnologies_D_G9_MarketplacePlatform/view/profile.php?user_id=<?=$free['id']?>"><?=$free['name']?></a> <span>sent you a project propsal for<span class="projectName"> <?=$posts['pname']?></span> was accepted by you</span>
-                        <?php
-                            }
-                        ?>
+                <div class="table">
+                    <div class="row">
+                        <div class="col">Order ID</div>
+                        <div class="col">Order By</div>
+                        <div class="col">Order Name</div>
+                        <div class="col">Order Status</div>
+                        <div class="col">Price</div>
+                        <div class="col">Review Buyer</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">11111111</div>
+                        <div class="col">Md Akash</div>
+                        <div class="col">Mini Web site</div>
+                        <div class="col">Complete</div>
+                        <div class="col">$ 50</div>
+                        <div class="col"><a href="review.php">Review</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">11111112</div>
+                        <div class="col">Md Sajjad</div>
+                        <div class="col">iOS app</div>
+                        <div class="col">Complete</div>
+                        <div class="col">$ 90</div>
+                        <div class="col"><a href="review.php">Review</a></div>
                     </div>
                 </div>
-                <?php 
-                            }
-                        }
-                    }
-
-                 ?>
             </div>
             <div class="right-sidebar">
                 <div class="recent">
@@ -103,7 +88,7 @@
             <?php include_once('footer.php')?>
         </div>
     </div>
-    <script src="../asset/script/requestmanage.js"></script>
+    
 </body>
 </html>
 <?php

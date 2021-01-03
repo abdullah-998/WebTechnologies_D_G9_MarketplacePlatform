@@ -1,8 +1,5 @@
 <?php
     session_start(); 
-    include_once('../model/requestService.php');
-    include_once('../model/postService.php');
-    include_once('../model/freelancerService.php');
     if(isset($_SESSION['log']))
     {
 
@@ -17,14 +14,32 @@
     <link rel="stylesheet" type="text/css" href="../asset/style/footer.css?v=<?php echo time()?>">
     <link rel="stylesheet" type="text/css" href="../asset/style/main.css?v=<?php echo time()?>">
     <link rel="stylesheet" type="text/css" href="../asset/style/home.css?v=<?php echo time()?>">
-    <link rel="stylesheet" type="text/css" href="../asset/style/post.css?v=<?php echo time()?>">
     <style>
-        .projectName{
-            color: rgb(127, 3, 252);
+        .table{
+            margin: 1rem;
         }
-        .reqss{
+        .row{
+            border: .2rem solid rgba(18, 236, 91, 0.856);
+            display: block;
+        }
+        .col{
+            display: inline;
+            padding: 1rem;
+            border-right: .1rem solid rgba(18, 236, 91, 0.856);
+        }
+        .chose{
+            color:#777;
+            margin:1rem;
             border: rgba(18, 236, 91, 0.856) .1rem solid;
-            margin: .5rem;
+        }
+        #w3review{
+            color:#777;
+            margin:1rem;
+            border: rgba(18, 236, 91, 0.856) .1rem solid;
+        }
+        #btni{
+            padding: .5rem 1rem;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -41,48 +56,24 @@
                 </div>
             </div>
             <div class="newsfeed">
-                <?php
-                    if($_SESSION['type']=='Buyer')
-                    {
-                        $reqs=requestByBuyerID($_SESSION['id']);
-                        if(count($reqs)>0) 
-                        {
-                            for($i=count($reqs)-1;$i>=0;$i--)
-                            {
-                                $posts=postInfo($reqs[$i]['pid']);
-                                $free=freelancerInfo($reqs[$i]['fid']);
-                ?>
-                <div class="notify">
-                    <div class="reqss">
-                        <?php 
-                            if($reqs[$i]['status']=='')
-                            {
-                        ?>
-                            <a class="link" href="http://localhost/php/webTechnologies_D_G9_MarketplacePlatform/view/profile.php?user_id=<?=$free['id']?>"><?=$free['name']?></a> <span>sent you a project propsal for<span class="projectName"> <?=$posts['pname']?></span></span>
-                            <a class="link" href="http://localhost/php/webTechnologies_D_G9_MarketplacePlatform/view/viewreq.php?req=<?=$reqs[$i]['rid']?>">view req</a>
-                        <?php 
-                            }
-                            else if($reqs[$i]['status']=='Reject')
-                            {
-                        ?>
-                        <a class="link" href="http://localhost/php/webTechnologies_D_G9_MarketplacePlatform/view/profile.php?user_id=<?=$free['id']?>"><?=$free['name']?></a> <span>sent you a project propsal for<span class="projectName"> <?=$posts['pname']?></span> was rejected by you</span>
-                        <?php 
-                            }
-                            else if($reqs[$i]['status']=='Accept')
-                            {
-                        ?>
-                        <a class="link" href="http://localhost/php/webTechnologies_D_G9_MarketplacePlatform/view/profile.php?user_id=<?=$free['id']?>"><?=$free['name']?></a> <span>sent you a project propsal for<span class="projectName"> <?=$posts['pname']?></span> was accepted by you</span>
-                        <?php
-                            }
-                        ?>
+                <div>
+                    <form>
+                    <div class="chose">
+                        Chose a star
+                        <select>
+                            <option>5</option>
+                            <option>4</option>
+                            <option>4</option>
+                            <option>2</option>
+                            <option>1</option>
+                        </select>
                     </div>
+                    <div class="chose">Comment</div>
+                    <textarea id="w3review" name="w3review" rows="4" cols="50">
+                    </textarea><br>
+                    <input type="submit" name="submit" id="btni" class="chose">
+                    </form>
                 </div>
-                <?php 
-                            }
-                        }
-                    }
-
-                 ?>
             </div>
             <div class="right-sidebar">
                 <div class="recent">
@@ -103,7 +94,7 @@
             <?php include_once('footer.php')?>
         </div>
     </div>
-    <script src="../asset/script/requestmanage.js"></script>
+    
 </body>
 </html>
 <?php
